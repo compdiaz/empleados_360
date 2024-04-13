@@ -1,7 +1,17 @@
-<mvc:View controllerName="empleados360.controller.App"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <content />
-    </Page>
+<mvc:View
+    controllerName="empleados360.controller.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Shell>
+        <App>
+            <Page title="{i18n>title}">
+            <Panel>
+            
+            </Panel>
+                <content />
+            </Page>
+        </App>
+    </Shell>
 </mvc:View>
