@@ -33,17 +33,18 @@
 										width="100%">
 									<SegmentedButton
 										width="320px"
-										selectionChange="setProductTypeFromSegmented">
+										selectionChange="ProductInfoStep">
 										<items>
-											<SegmentedButtonItem  text="{i18n>autonomo}"/>
-											<SegmentedButtonItem text="{i18n>interno}"/>
-											<SegmentedButtonItem  text="{i18n>gerente}"/>
+											<SegmentedButtonItem  text="{i18n>autonomo}" press="onPress"/>
+											<SegmentedButtonItem text="{i18n>interno}" press="onPress"/>
+											<SegmentedButtonItem  text="{i18n>gerente}" press="onPress" />
+                                            
 										</items>
 									</SegmentedButton>
 								</HBox>
 							</WizardStep>
 							<WizardStep id="ProductInfoStep"
-										validated="false"
+										validated="true"
 										title="{i18n>wizardStep2}"
 										activate="additionalInfoValidation">
 								<MessageStrip class="sapUiSmallMarginBottom"
@@ -67,7 +68,7 @@
 											liveChange="additionalInfoValidation"  placeholder="Ingrese número de dni"
 											value="{/productWeight}"/>
 	<Label text="Salario Bruto Anual"/>
-			<Slider width="80%" class="sapUiTinyMargin" change="handleChange" value="24000" min="12000" max="80000" step="3" showTickmarks="true" labelInterval="2"></Slider>
+			<Slider width="80%" class="sapUiTinyMargin" change="handleChange" value="24000" min="12000" max="80000" step="3" enableTickmarks="true" labelInterval="2"></Slider>
 
 <Label text="Fecha Incorporación" labelFor="DP1"/>
 				<DatePicker

@@ -10,6 +10,12 @@ sap.ui.define([
         return Controller.extend("empleados360.controller.App", {
             onInit: function () {
 
-            }
+            },
+
+            onPress: function(oEvent) {
+
+                this.getView().byId("CreateProductWizard").nextStep();
+                
+                }
         });
     });
