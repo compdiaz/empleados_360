@@ -24,8 +24,9 @@
                                         	<MessageStrip class="sapUiSmallMarginBottom"
 										text="Complete los datos obligatorios para continuar"
 										showIcon="true"/>
-								<Text class="sapUiSmallMarginBottom"
-										text="Sed fermentum, mi et tristique ullamcorper, sapien sapien faucibus sem, quis pretium nibh lorem malesuada diam. Nulla quis arcu aliquet, feugiat massa semper, volutpat diam. Nam vitae ante posuere, molestie neque sit amet, dapibus velit. Maecenas eleifend tempor lorem. Mauris vitae elementum mi, sed eleifend ligula. Nulla tempor vulputate dolor, nec dignissim quam convallis ut. Praesent vitae commodo felis, ut iaculis felis. Fusce quis eleifend sapien, eget facilisis nibh. Suspendisse est velit, scelerisque ut commodo eget, dignissim quis metus. Cras faucibus consequat gravida. Curabitur vitae quam felis. Phasellus ac leo eleifend, commodo tortor et, varius quam. Aliquam erat volutpat"/>
+
+                                        <FormattedText class="sapUiSmallMarginBottom"
+               htmlText="{i18n>html}"							/>
 								<HBox
 										alignItems="Center"
 										justifyContent="Center"
@@ -48,7 +49,6 @@
 								<MessageStrip class="sapUiSmallMarginBottom"
 										text="Complete los datos obligatorios para continuar "
 										showIcon="true"/>
-								<Text text="Cras tellus leo, volutpat vitae ullamcorper eu, posuere malesuada nisl. Integer pellentesque leo sit amet dui vehicula, quis ullamcorper est pulvinar. Nam in libero sem. Suspendisse arcu metus, molestie a turpis a, molestie aliquet dui. Donec pulvinar, sapien et viverra imperdiet, orci erat porttitor nulla, eget commodo metus nibh nec ipsum. Aliquam lacinia euismod metus, sollicitudin pellentesque purus volutpat eget. Pellentesque egestas erat quis eros convallis mattis. Mauris hendrerit sapien a malesu corper eu, posuere malesuada nisl. Integer pellentesque leo sit amet dui vehicula, quis ullamcorper est pulvinar. Nam in libero sem. Suspendisse arcu metus, molestie a turpis a, molestie aliquet dui. Donec pulvinar, sapien	corper eu, posuere malesuada nisl. Integer pellentesque leo sit amet dui vehicula, quis ullamcorper est pulvinar. Nam in libero sem. Suspendisse arcu metus, molestie a turpis a, molestie aliquet dui. Donec pulvinar, sapien	"/>
 								<form:SimpleForm
 										editable="true"
 										layout="ResponsiveGridLayout">
@@ -56,22 +56,26 @@
 									<Input valueStateText="Enter 6 symbols or more"
 											valueState="{/productNameState}" id="EmpleadoName" liveChange="additionalInfoValidation"
 											placeholder="Enter name with length greater than 6" value="{/productName}"/>
-									<Label text="Weight" required="true"/>
+									<Label text="Apellidos" required="true"/>
 									<Input valueStateText="Enter digits"
 											valueState="{/productWeightState}" id="EmpleadoWeight"
 											liveChange="additionalInfoValidation" type="Number" placeholder="Enter digits"
 											value="{/productWeight}"/>
-									<Label text="Manufacturer"/>
-									<Select selectedKey="{/productManufacturer}">
-										<core:Item key="Apple" text="Apple"/>
-										<core:Item key="Microsoft" text="Microsoft"/>
-										<core:Item key="Google" text="Google"/>
-										<core:Item key="Sony" text="Sony"/>
-										<core:Item key="Samsung" text="Samsung"/>
-										<core:Item key="Logitech" text="Logitech"/>
-									</Select>
-									<Label text="Description"/>
-									<TextArea value="{/productDescription}" rows="8"/>
+									<Label text="Dni" required="true"/>
+									<Input valueStateText="Ingrese número de dni"
+											valueState="{/productWeightState}" id="EmpleadoDni"
+											liveChange="additionalInfoValidation"  placeholder="Ingrese número de dni"
+											value="{/productWeight}"/>
+	<Label text="Salario Bruto Anual"/>
+			<Slider width="80%" class="sapUiTinyMargin" change="handleChange" value="24000" min="12000" max="80000" step="3" showTickmarks="true" labelInterval="2"></Slider>
+
+<Label text="Fecha Incorporación" labelFor="DP1"/>
+				<DatePicker
+					id="DP1"
+					placeholder="Ingrese Fecha"
+					change="handleChange"
+					class="sapUiSmallMarginBottom"/>
+
 								</form:SimpleForm>
 							</WizardStep>
                             <WizardStep id="InformaStep"
