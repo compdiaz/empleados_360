@@ -85,30 +85,30 @@
       }
     },
     {
-        "name": "index",
-        "cwd": "${workspaceFolder}/empleados360",
-        "runtimeArgs": [
-            "fiori",
-            "run"
-        ],
-        "type": "node",
-        "request": "launch",
-        "runtimeExecutable": "npx",
-        "args": [
-            "--open",
-            "index.html"
-        ],
-        "windows": {
-            "runtimeExecutable": "npx.cmd"
-        },
-        "console": "internalConsole",
-        "internalConsoleOptions": "openOnSessionStart",
-        "outputCapture": "std",
-        "env": {
-            "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/ydiazs/empleados360\"}",
-            "FIORI_TOOLS_BACKEND_CONFIG": "[{\"path\":\"/sap\",\"url\":\"http://erp13.sap4practice.com:9037\",\"client\":\"001\",\"destination\":\"logaligroupERP\"}]",
-            "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false"
-        }
+      "name": "index",
+      "cwd": "${workspaceFolder}/empleados360",
+      "runtimeArgs": [
+        "fiori",
+        "run"
+      ],
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npx",
+      "args": [
+        "--open",
+        "index.html"
+      ],
+      "windows": {
+        "runtimeExecutable": "npx.cmd"
+      },
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
+      "outputCapture": "std",
+      "env": {
+        "run.config": "{\"handlerId\":\"fiori_tools\",\"runnableId\":\"/home/user/projects/ydiazs/empleados360\"}",
+        "FIORI_TOOLS_BACKEND_CONFIG": "[{\"path\":\"/sap\",\"url\":\"http://erp13.sap4practice.com:9037\",\"client\":\"001\",\"destination\":\"logaligroupERP\"}]",
+        "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false"
+      }
     }
   ]
 }
