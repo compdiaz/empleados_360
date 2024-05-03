@@ -11,16 +11,15 @@
 >
     <Shell id="shell">
         <App>
-            <Page title="{i18n>title}" titleAlignment="Center" enableScrolling="false" showFooter="true"  
->
-<Panel>
+            <Page title="{i18n>title}" titleAlignment="Center" enableScrolling="false" showFooter="true" showHeader="true" >
+
           <content>
           <ToolbarSpacer />
-						<Wizard id="CreateProductWizard" width="auto" renderMode="{i18n>modoVer}" class="sapUiResponsivePadding--header sapUiResponsivePadding--content"
+						<Wizard id="CrearEmpleadoWizard" width="auto" renderMode="{i18n>modoVer}" class="sapUiResponsivePadding--header sapUiResponsivePadding--content"
 								complete="wizardCompletedHandler">
-                              	<WizardStep id="ProductTypeStep"
+                              	<WizardStep id="EmpleadoTypeStep1"
                                         title="{i18n>wizardStep1}"
-										validated="true">
+										validated="false">
                                         	<MessageStrip class="sapUiSmallMarginBottom"
 										text="Complete los datos obligatorios para continuar"
 										showIcon="true"/>
@@ -33,17 +32,18 @@
 										width="100%">
 									<SegmentedButton
 										width="320px"
-										selectionChange="ProductInfoStep">
+										selectionChange="CrearEmpleadoStep2">
 										<items>
-											<SegmentedButtonItem  text="{i18n>autonomo}" press="onPress"/>
-											<SegmentedButtonItem text="{i18n>interno}" press="onPress"/>
-											<SegmentedButtonItem  text="{i18n>gerente}" press="onPress" />
-                                            
+											<SegmentedButtonItem  text="{i18n>autonomo}" press="onPressPaso2"/>
+											<SegmentedButtonItem text="{i18n>interno}" press="onPressPaso2"/>
+											<SegmentedButtonItem  text="{i18n>gerente}" press="onPressPaso2" />
+                                           
 										</items>
 									</SegmentedButton>
 								</HBox>
+
 							</WizardStep>
-							<WizardStep id="ProductInfoStep"
+							<WizardStep id="CrearEmpleadoStep2"
 										validated="true"
 										title="{i18n>wizardStep2}"
 										activate="additionalInfoValidation">
@@ -103,7 +103,7 @@
 							</WizardStep>
                             	</Wizard>
 					</content>
-</Panel>
+
             <Panel>
              
             	<OverflowToolbar id="otb2">
@@ -117,6 +117,7 @@
             </Panel>
                 <content />
             </Page>
+			
         </App>
     </Shell>
 </mvc:View>

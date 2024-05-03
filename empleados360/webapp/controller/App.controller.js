@@ -12,10 +12,10 @@ sap.ui.define([
 
             },
 
-            onPress: function(oEvent) {
+            onPressPaso2: function(oEvent) {
 
-                this.getView().byId("CreateProductWizard").nextStep();
-                
+               this.getView().byId("CrearEmpleadoWizard").nextStep();
+console.log(oEvent)
                 }
         });
     });
