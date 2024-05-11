@@ -6,7 +6,7 @@
 						<pages>
 							<Page	showHeader="false">
 								<content>
-									<Wizard id="wizard" complete="wizardCompletedHandler">
+									<Wizard id="wizard" renderMode= "{i18n>renderMode}" complete="wizardCompletedHandler">
 										<WizardStep id="typeEmployeeStep" title="{i18n>tipoEmpleado}"
 													validated="false">
 											<MessageStrip class="sapUiSmallMarginBottom"
