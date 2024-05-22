@@ -165,7 +165,7 @@ sap.ui.define([
 
     function downloadFile(oEvent){
         var sPath = oEvent.getSource().getBindingContext("odataModel").getPath();
-        window.open("/sap/opu/odata/sap/ZEMPLOYEES_SRV"+sPath+"/$value");
+        window.open("/0e2ea6ee-9522-43b8-ac3a-43c9a60f11e3.rrhh.empleados360HTML5Module-1.0.0/sap/opu/odata/sap/ZEMPLOYEES_SRV"+sPath+"/$value");
 	
     }
 

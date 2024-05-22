@@ -89,7 +89,7 @@
 													maximumFileSize="10"
 													multiple="true"
 												
-													uploadUrl="/sap/opu/odata/sap/ZEMPLOYEES_SRV/Attachments"
+													uploadUrl="/0e2ea6ee-9522-43b8-ac3a-43c9a60f11e3.rrhh.empleados360HTML5Module-1.0.0/sap/opu/odata/sap/ZEMPLOYEES_SRV/Attachments"
 													sameFilenameAllowed="true"
 													instantUpload="false"
 													change="onChange"

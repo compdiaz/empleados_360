@@ -26,6 +26,36 @@ modules:
     - npm install
     - npm run build:cf
     supported-platforms: []
+- name: ydiazs-destination-content
+  type: com.sap.application.content
+  requires:
+  - name: ydiazs-destination-service
+    parameters:
+      content-target: true
+  - name: ydiazs-repo-host
+    parameters:
+      service-key:
+        name: ydiazs-repo-host-key
+  - name: uaa_ydiazs
+    parameters:
+      service-key:
+        name: uaa_ydiazs-key
+  parameters:
+    content:
+      instance:
+        destinations:
+        - Name: rrhh_ydiazs_repo_host
+          ServiceInstanceName: ydiazs-html5-srv
+          ServiceKeyName: ydiazs-repo-host-key
+          sap.cloud.service: rrhh
+        - Authentication: OAuth2UserTokenExchange
+          Name: rrhh_uaa_ydiazs
+          ServiceInstanceName: ydiazs-xsuaa-service
+          ServiceKeyName: uaa_ydiazs-key
+          sap.cloud.service: rrhh
+        existing_destinations_policy: ignore
+  build-parameters:
+    no-source: true
 resources:
 - name: ydiazs-repo-host
   type: org.cloudfoundry.managed-service
@@ -37,19 +67,17 @@ resources:
   type: org.cloudfoundry.managed-service
   parameters:
     config:
-      HTML5Runtime_enabled: false
-      init_data:
-        instance:
-          destinations:
-          - Authentication: NoAuthentication
-            Name: ui5
-            ProxyType: Internet
-            Type: HTTP
-            URL: https://ui5.sap.com
-          existing_destinations_policy: update
+      HTML5Runtime_enabled: true
       version: 1.0.0
     service: destination
     service-name: ydiazs-destination-service
     service-plan: lite
+- name: uaa_ydiazs
+  type: org.cloudfoundry.managed-service
+  parameters:
+    path: ./xs-security.json
+    service: xsuaa
+    service-name: ydiazs-xsuaa-service
+    service-plan: application
 parameters:
   deploy_mode: html5-repo
